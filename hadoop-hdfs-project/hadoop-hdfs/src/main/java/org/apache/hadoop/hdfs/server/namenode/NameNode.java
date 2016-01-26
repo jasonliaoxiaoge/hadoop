@@ -1563,6 +1563,7 @@ public class NameNode implements NameNodeStatusMXBean {
       }
       case RECOVER: {
         NameNode.doRecovery(startOpt, conf);
+        terminate(0);
         return null;
       }
       case METADATAVERSION: {
